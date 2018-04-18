@@ -11,13 +11,22 @@ def input_to_index(string)
  return index
 end 
 
-#def valid_move?(board, index)
-  if position_taken?(board, index)
-    false
+def valid_move?(board, index)
+
+  if index.between?(0,8) && !position_taken?(board, index)
+      puts 'this is a valid move'
+    return true
   else
-    true
-  end   
-end 
+   return false
+  end
+end
+#def valid_move?(board, index)
+  #f position_taken?(board, index)
+    #false
+  #else
+   # true
+  #end   
+#end 
 
  
 def position_taken?(board, index)
