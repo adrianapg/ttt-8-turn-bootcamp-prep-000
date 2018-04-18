@@ -13,20 +13,16 @@ end
 
 def valid_move?(board, index)
   if position_taken?(board, index)
-    true
-  elsif position_taken?(board, index) == nil
     false
   else
-    false
+    true
   end   
 end 
 
  
 def position_taken?(board, index)
-  if board[index]==" " || board[index]=="" #|| board[index]==nil
+  if board[index]==" " || board[index]=="" || board[index]==nil
      false  
-  elsif  board[index]==nil
-     nil
   elsif  board[index]=="X" || board[index]=="O"
      true
   else 
@@ -42,13 +38,12 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input=gets.strip
-  index=input_to_index(input)
-  if index.between?(1, 9)
-    return index
-    valid_move?(board, index)
-  else
-    puts "It is an invalid number.Please enter 1-9:"
-  end   
+  #if input.between?(0, 10)
+   index=input_to_index(input)
+     #valid_move?(board, index)
+  #else
+   # puts "It is an invalid number.Please enter 1-9:"
+  #end   
 end
 
   
