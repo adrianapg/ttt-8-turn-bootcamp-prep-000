@@ -43,7 +43,6 @@ def turn(board)
   if valid_move?(board, index)
      move(board, index, value="X")
      display_board(board)
-     #true
   else
     puts "It is an invalid move. Try again."
     turn(board)
