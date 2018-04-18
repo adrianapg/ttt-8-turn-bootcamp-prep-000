@@ -41,9 +41,9 @@ def turn(board)
   input=gets.strip
   index=input_to_index(input)
   if valid_move?(board, index)
-     #valid_move?(board, index)
-  #else
-   # puts "It is an invalid number.Please enter 1-9:"
+     true
+  else
+    puts "It is an invalid number.Please enter 1-9:"
   end   
 end
 
