@@ -43,8 +43,8 @@ def turn(board)
   if valid_move?(board, index)
      true
   else
-    false
-    puts "It is an invalid number.Please enter 1-9:"
+    puts "It is an invalid move. Try again."
+    turn(board)
   end   
 end
 
